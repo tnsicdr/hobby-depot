@@ -29,6 +29,7 @@ export default defineConfig({
     }),
   ],
   test: {
+    globals: true,
     projects: [
       {
         extends: true,
@@ -51,6 +52,14 @@ export default defineConfig({
               },
             ],
           },
+        },
+      },
+      {
+        test: {
+          globals: true,
+          environment: 'jsdom',
+          name: 'unit-tests',
+          setupFiles: ['src/test-setup.ts'],
         },
       },
     ],
