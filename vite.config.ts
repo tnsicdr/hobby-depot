@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import babel from '@rolldown/plugin-babel';
 import { tanstackRouter } from '@tanstack/router-plugin/vite';
+import { patchCssModules } from 'vite-css-modules';
 
 // https://vite.dev/config/
 import path from 'node:path';
@@ -21,6 +22,7 @@ export default defineConfig({
       target: 'react',
       autoCodeSplitting: true,
     }),
+    patchCssModules(),
     react(),
     babel({
       presets: [reactCompilerPreset()],
