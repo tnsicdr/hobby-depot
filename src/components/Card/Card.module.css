@@ -1,5 +1,23 @@
 .card-container {
-  border: 1px solid black;
+  border: 1px solid currentColor;
   border-radius: 0.5rem;
+  color: black;
+  margin: 1rem;
+  padding: 0;
+}
+
+.card-title {
+  background-color: currentColor;
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+  padding: 0.5rem;
+}
+
+.card-title-contents {
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+.card-content {
   padding: 0.5rem;
 }
